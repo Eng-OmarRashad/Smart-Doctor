@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap">
+<title>دكتور الدواجن الذكي</title>
+<style>
+:root{--bg:#0b0b0b;--card:#15130f;--tx:#f4ecd6;--mu:#a89a78;--pr:#d4af37;--pr2:#241d0a;--bd:#3b3115;--wa:#d4af37;--wb:#241d0a;color-scheme:dark;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}html,body{margin:0}
+body{background:var(--bg);color:var(--tx);font-family:Tajawal,Tahoma,"Segoe UI",system-ui,sans-serif;line-height:1.7;font-size:16px}
+header{background:linear-gradient(180deg,#000,#16120a);color:#f4ecd6;padding:14px 16px 12px;text-align:center;border-bottom:2px solid var(--pr)}
+.logo{width:96px;height:96px;display:block;margin:0 auto 2px}
+.led{direction:ltr;display:inline-block;font-weight:700;font-size:1.55rem;letter-spacing:2px;margin-bottom:6px;background:linear-gradient(100deg,#9c7a1c 0%,#c9a227 38%,#fff1a8 50%,#c9a227 62%,#9c7a1c 100%);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;filter:drop-shadow(0 0 6px rgba(212,175,55,.65));animation:sweep 2.4s linear infinite}
+@keyframes sweep{from{background-position:150% 0}to{background-position:-50% 0}}
+@media (prefers-reduced-motion:reduce){.led{animation:none;-webkit-text-fill-color:#d4af37}}
+header h1{margin:0;font-size:1.3rem;color:#e9c960}header p{margin:2px 0 0;font-size:.85rem;color:var(--mu)}
+nav{display:flex;gap:6px;padding:8px;overflow-x:auto;background:var(--card);border-bottom:1px solid var(--bd);position:sticky;top:env(safe-area-inset-top,0px);z-index:5}
+nav button{flex:1 0 auto;border:1px solid var(--bd);background:var(--bg);color:var(--tx);padding:9px 12px;border-radius:8px;font:inherit;font-size:.9rem;cursor:pointer;white-space:nowrap}
+nav button.on{background:var(--pr);color:#111;border-color:var(--pr);font-weight:700}
+main{max-width:760px;margin:0 auto;padding:12px}
+section{display:none}section.on{display:block}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:14px;margin-bottom:12px}
+h2{margin:0 0 8px;font-size:1.1rem;color:var(--pr)}
+label{display:block;font-size:.85rem;color:var(--mu);margin:8px 0 2px}
+input,select,textarea{width:100%;padding:10px;border:1px solid var(--bd);border-radius:10px;background:var(--bg);color:var(--tx);font:inherit}
+.btn{background:var(--pr);color:#1a1405;font-weight:700;border:0;padding:11px 18px;border-radius:10px;font:inherit;cursor:pointer;margin-top:10px}
+.btn.sec{background:var(--pr2);color:var(--pr)}.btn:disabled{opacity:.5}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.msgs{max-height:55vh;overflow-y:auto;padding:4px}
+.m{padding:10px 12px;border-radius:12px;margin:6px 0;white-space:pre-wrap;word-break:break-word}
+.m.u{background:var(--pr2)}.m.a{background:var(--bg);border:1px solid var(--bd)}
+.warn{background:var(--wb);color:var(--wa);border-radius:10px;padding:8px 10px;font-size:.82rem;margin-bottom:10px}
+.tbl{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:.88rem}
+th,td{border:1px solid var(--bd);padding:7px;text-align:center}th{background:var(--pr2);color:var(--pr)}
+.res{background:var(--pr2);border-radius:10px;padding:10px;margin-top:10px}
+.res b{color:var(--pr)}.sm{font-size:.82rem;color:var(--mu)}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0}.chips button{font-size:.8rem;padding:5px 10px;border-radius:14px;border:1px solid var(--bd);background:var(--bg);color:var(--tx);cursor:pointer;font-family:inherit}
+.ck{display:flex;gap:8px;align-items:center;color:var(--tx);font-size:.92rem;margin:7px 0}.ck input{width:auto}
+details.card summary{cursor:pointer;color:var(--pr);list-style:none}details.card p{margin:6px 0;font-size:.9rem}
+footer{text-align:center;padding:18px 12px 24px;color:var(--mu);font-size:.8rem;border-top:1px solid var(--bd);margin-top:10px}
+footer b{color:var(--pr);display:block;direction:ltr;font-size:.9rem}
+</style>
+</head>
+<body>
+<header><svg class="logo" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="logo">
+<circle cx="60" cy="60" r="57" fill="#0b0b0b" stroke="#d4af37" stroke-width="2.5"/>
+<circle cx="60" cy="60" r="52" fill="none" stroke="#d4af37" stroke-width=".8" opacity=".6"/>
+<ellipse cx="60" cy="66" rx="27" ry="25" fill="#fff4cf" stroke="#d4af37" stroke-width="2"/>
+<path d="M44 62c4 12 18 16 28 6" fill="none" stroke="#d4af37" stroke-width="1.6"/>
+<circle cx="60" cy="33" r="15" fill="#fff4cf" stroke="#d4af37" stroke-width="2"/>
+<circle cx="53" cy="17" r="4.5" fill="#c0392b"/><circle cx="60" cy="14" r="5" fill="#c0392b"/><circle cx="67" cy="17" r="4.5" fill="#c0392b"/>
+<path d="M73 32l9 4-9 4z" fill="#e8a317"/><path d="M71 41c1 6 5 6 4 0z" fill="#c0392b"/>
+<circle cx="66" cy="30" r="2.2" fill="#111"/>
+<path d="M49 44c-1 13 9 16 11 20M71 44c1 13-9 16-11 20M60 64v8" fill="none" stroke="#d4af37" stroke-width="2.6" stroke-linecap="round"/>
+<circle cx="49" cy="43" r="2.4" fill="#d4af37"/><circle cx="71" cy="43" r="2.4" fill="#d4af37"/><circle cx="60" cy="75" r="4.6" fill="#d4af37" stroke="#0b0b0b" stroke-width="1"/>
+<rect x="30" y="84" width="60" height="25" rx="3" fill="#111" stroke="#d4af37" stroke-width="2"/>
+<rect x="34" y="88" width="52" height="17" rx="1.5" fill="#1d1705"/>
+<polyline points="36,97 46,97 50,91 56,103 62,94 66,97 84,97" fill="none" stroke="#d4af37" stroke-width="1.8" stroke-linejoin="round"/>
+<path d="M22 110h76l-5 4H27z" fill="#d4af37"/>
+</svg><h1>دكتور الدواجن الذكي</h1><div class="led">Eng_Omar Rashad</div><p>استشاري الدواجن — علاج بيطري أو طبيعي</p></header>
+<nav id="nav">
+<button data-t="vet" class="on">الدكتور البيطري</button>
+<button data-t="calc">FCR والجدوى</button>
+<button data-t="enc">موسوعة السلالات</button>
+<button data-t="sup">الدعم والمكملات</button>
+</nav>
+<main>
+
+<section id="vet" class="on">
+<div class="card">
+<h2>التشخيص والعلاج</h2>
+<div class="grid">
+<div><label>السلالة</label><select id="vb"><option>كوب 500</option><option>روس 308</option><option>هبرد</option><option>غير محدد</option></select></div>
+<div><label>العمر (يوم)</label><input id="va" type="number" inputmode="numeric" min="1" max="60" placeholder="مثال: 14"></div>
+</div>
+<div class="chips" id="chips"></div>
+<div class="msgs" id="msgs"></div>
+<label id="vl">صف الأعراض (نفس، زرق، علف، حرارة، نفوق...)</label>
+<textarea id="vt" rows="3" placeholder="مثال: عطس وسيلان أنف وزرق أخضر في عمر 12 يوم"></textarea>
+<label id="imgl">ارفع صورة (فراخ / زرق / عنبر) — اختياري</label>
+<input id="vi" type="file" accept="image/*">
+<button class="btn" id="vs">شخّص الحالة</button>
+<button class="btn sec" id="vc">مسح</button>
+</div>
+</section>
+
+<section id="calc">
+<div class="card"><h2>حاسبة FCR ودراسة الجدوى</h2>
+<div class="grid">
+<div><label>عدد الكتاكيت</label><input id="c1" type="number" value="1000"></div>
+<div><label>سعر الكتكوت (ج)</label><input id="c2" type="number" value="25"></div>
+<div><label>العلف المستهلك (كجم)</label><input id="c3" type="number" value="3300"></div>
+<div><label>سعر كيلو العلف (ج)</label><input id="c4" type="number" value="20"></div>
+<div><label>عدد النافق</label><input id="c5" type="number" value="40"></div>
+<div><label>متوسط وزن الفرخة (كجم)</label><input id="c6" type="number" step="0.01" value="2.2"></div>
+<div><label>أدوية وتحصينات (ج)</label><input id="c7" type="number" value="4000"></div>
+<div><label>عمالة/كهرباء/غاز/أخرى (ج)</label><input id="c8" type="number" value="8000"></div>
+<div><label>سعر بيع الكيلو القائم (ج)</label><input id="c9" type="number" value="75"></div>
+</div>
+<button class="btn" id="cb">احسب</button>
+<div class="res" id="cr" hidden></div></div>
+<div class="card"><h2>فحص الوزن مقابل المعيار</h2>
+<div class="grid">
+<div><label>العمر (يوم)</label><select id="w1"></select></div>
+<div><label>متوسط وزن القطيع (جم)</label><input id="w2" type="number" placeholder="مثال: 900"></div>
+</div>
+<button class="btn sec" id="wb2">قارن</button>
+<div class="res" id="wr" hidden></div></div>
+</section>
+
+<section id="enc">
+<div class="card"><h2>مقارنة السلالات</h2>
+<div class="tbl"><table>
+<tr><th>البند</th><th>كوب 500</th><th>روس 308</th><th>هبرد</th></tr>
+<tr><td>أبرز ميزة</td><td>أعلى تصافي صدر</td><td>توازن ومقاومة إجهاد</td><td>صلابة ومناعة</td></tr>
+<tr><td>التحويل (FCR)</td><td>ممتاز نظرياً</td><td>ممتاز</td><td>متميز عند إدارة مثالية (حتى ~1.43 حقلياً)</td></tr>
+<tr><td>الحساسية</td><td>التجانس والتقلبات</td><td>منخفضة نسبياً</td><td>منخفضة</td></tr>
+<tr><td>الحرارة/العنابر المفتوحة</td><td>تحتاج عناية</td><td>جيدة جداً</td><td>جيدة</td></tr>
+<tr><td>الشهية</td><td>عالية</td><td>عالية</td><td>مفتوحة ومستقرة</td></tr>
+</table></div>
+<p class="sm">أرقام الأداء تقريبية وتختلف حسب الإدارة والعلف والمناخ؛ راجع كتالوج الشركة المنتجة.</p></div>
+<div class="card"><h2>الوزن القياسي التقريبي (مختلط)</h2>
+<div class="tbl"><table id="wt"><tr><th>العمر</th><th>الوزن (جم)</th></tr></table></div>
+<p class="sm">يُستخدم كمرجع عام؛ قد يزيد أو ينقص 5–10% بين السلالات.</p></div>
+<div class="card"><h2>سيناريوهات ميدانية سريعة</h2>
+<p>• <b>حر شديد:</b> ارفع التهوية، قلل الكثافة، أضف أملاحاً وفيتامين C، وقدّم العلف في الأوقات الباردة.<br>
+• <b>برد وتدفئة:</b> راقب سلوك الكتاكيت (تكدس = برد، ابتعاد ولهث = حر).<br>
+• <b>ضعف تجانس:</b> افرز الصغار مبكراً وعدّل المساحات والمعالف.<br>
+• <b>رطوبة الفرشة:</b> افحص السقايات والتهوية لتقليل الأمونيا والكوكسيديا.</p></div>
+</section>
+
+<section id="sup">
+<div class="card"><h2>متى يحتاج القطيع دعماً؟</h2><p class="sm">غسيل كلى، منظف كبد، مضاد سموم، أملاح وفيتامينات: لكل منها مؤشراته، وبديلان (كيماوي/أملاح غير عضوية مقابل عضوي/طبيعي). الدعم لا يغني عن علاج السبب.</p></div>
+<div id="sl"></div>
+</section>
+</main>
+<footer>
+<b>Developed, Designed, and Created by ENG_Omar_Rashad</b>
+© All rights reserved — ENG_Omar_Rashad
+</footer>
+
+<script>
+const $=id=>document.getElementById(id);
+const STD={7:185,14:470,21:930,28:1520,35:2180,42:2850};
+// tabs
+document.querySelectorAll('#nav button').forEach(b=>b.onclick=()=>{
+ document.querySelectorAll('#nav button').forEach(x=>x.classList.toggle('on',x===b));
+ document.querySelectorAll('section').forEach(s=>s.classList.toggle('on',s.id===b.dataset.t));
+ scrollTo(0,0)});
+// std tables
+Object.entries(STD).forEach(([d,w])=>{
+ $('wt').insertAdjacentHTML('beforeend',`<tr><td>${d} يوم</td><td>${w}</td></tr>`);
+ $('w1').insertAdjacentHTML('beforeend',`<option value="${d}">${d} يوم</option>`)});
+$('wb2').onclick=()=>{
+ const d=+$('w1').value,w=+$('w2').value;if(!w)return;
+ const p=w/STD[d]*100,r=$('wr');r.hidden=false;
+ const s=p>=105?'أعلى من المعيار — تأكد من عدم الإفراط في التغذية وراقب الأرجل والقلب.':
+  p>=95?'نمو ممتاز ضمن المعيار.':p>=85?'أقل قليلاً من المعيار — راجع جودة العلف والمياه والحرارة والتجانس.':
+  'أقل بوضوح من المعيار — افحص المياه والعلف والإضاءة والأمراض (كوكسيديا/تنفسي) واستشر بيطرياً.';
+ r.innerHTML=`المعيار: <b>${STD[d]} جم</b> — وزن قطيعك: <b>${p.toFixed(0)}%</b> من المعيار<br>${s}`};
+// calculator
+$('cb').onclick=()=>{
+ const v=i=>+$('c'+i).value||0,n=v(1),dead=v(5),live=n-dead,kg=live*v(6);
+ const fcr=kg?v(3)/kg:0,cost=n*v(2)+v(3)*v(4)+v(7)+v(8),rev=kg*v(9),pf=rev-cost;
+ const f=x=>Math.round(x).toLocaleString('ar-EG');
+ const r=$('cr');r.hidden=false;
+ r.innerHTML=`نسبة النفوق: <b>${(dead/n*100).toFixed(1)}%</b><br>إجمالي الوزن الحي: <b>${f(kg)} كجم</b><br>معامل التحويل FCR: <b>${fcr.toFixed(2)}</b><br>إجمالي التكلفة: <b>${f(cost)} ج</b><br>تكلفة كيلو اللحم الحي: <b>${kg?(cost/kg).toFixed(1):0} ج</b><br>الإيراد المتوقع: <b>${f(rev)} ج</b><br>${pf>=0?'الربح':'الخسارة'} المتوقع: <b>${f(Math.abs(pf))} ج</b> (${f(live?pf/live:0)} ج/فرخة)`};
+const SPN={kid:'غسيل كلوي',liv:'منظف كبد',tox:'مضاد سموم',elc:'أملاح وإلكتروليت',vit:'فيتامينات وبروبيوتيك'};
+const SUP=[
+['غسيل الكلى (دعم كلوي)','زرق أبيض كثيف، جفاف، يوريتات، بعد سلفا أو أمينوجليكوزيد أو أدوية كثيرة، IB كلوي، حر مع ملح عالٍ','منتجات كلوية بيطرية (سترات/بوتاسيوم، مدرات) حسب النشرة، مع ماء وفير','منقوع شعر الذرة (نحو 50 جم/لتر ماء مغلي ويخفف 1:10 في ماء الشرب)، خل تفاح 2–3 مل/لتر، ليمون','لا تتجاوز 3–5 أيام، وأوقف الأدوية السامة للكلى'],
+['منظف الكبد','كبد شاحب أو دهني، بعد سلسلة علاجات، سموم فطرية، بعد تحصين متعب، تراجع التحويل','سيليمارين، كولين كلوريد، بيتايين، ميثيونين مع سوربيتول حسب النشرة','شوك الجمل، خرشوف، كركم (نحو 0.5–1 جم/كجم علف)','يفيد كداعم بعد العلاجات لا كبديل عنها'],
+['مضاد السموم (مثبت سموم فطرية)','علف عفن أو رطب، نمو ضعيف، كبد هش، ضعف استجابة التحصين','بنتونيت/HSCAS أو جدار خلية الخميرة أو مزيل سموم 1–2 كجم/طن علف','فحم نشط وكركم، والأهم تغيير دفعة العلف وتحليلها','المثبت لا يصلح علفاً فاسداً جداً؛ غيّر العلف'],
+['الأملاح والإلكتروليت','حر، إسهال مائي، جفاف، بعد تحصين أو نقل، ضعف شرب','أملاح غير عضوية: جلوكوز 20 جم + ملح 3.5 جم + بيكربونات 2.5 جم + كلوريد بوتاسيوم 1.5 جم/لتر لمدة 2–3 أيام','أملاح عضوية (سترات/جلوكونات/أسيتات) وأحماض أمينية أخف على الكلى وأكثر ثباتاً؛ منزلياً: لتر ماء + 20 مل عسل + رشة ملح','الإفراط في الملح والبيكربونات يسبب إسهالاً وجفافاً وضرراً للكلى'],
+['فيتامينات وبروبيوتيك','بعد إجهاد أو علاج مضاد حيوي أو برد أو تحصين','AD3E، فيتامين K (مع الكوكسيديا)، B-complex، فيتامين C، E مع سلينيوم','بروبيوتيك وخميرة بيرة وعسل وزبادي','أعط بعد انتهاء المضاد الحيوي بساعات لا معه مباشرة (للبروبيوتيك)']
+];
+const fl=(k,t)=>t?'<p><b>'+k+':</b> '+t+'</p>':'';
+const q1=x=>x.split('،')[0],sh=(x,n)=>x.split('،').slice(0,n).join('،'),sum='style="cursor:pointer;color:var(--pr);font-weight:bold;margin-top:8px"';
+$('sl').innerHTML=SUP.map(u=>'<div class="card"><b style="color:var(--pr)">'+u[0]+'</b><p><b>متى:</b> '+sh(u[1],3)+'</p><p><b>كيماوي/غير عضوي:</b> '+q1(u[2])+'</p><p><b>عضوي/طبيعي:</b> '+q1(u[3])+'</p><details><summary '+sum+'>تفاصيل</summary>'+fl('مؤشرات الحاجة',u[1])+fl('الخيار الكيماوي / غير العضوي',u[2])+fl('الخيار العضوي / الطبيعي',u[3])+fl('تنبيه',u[4])+'</details></div>').join('');
+// AI vet
+const SYS=`أنت طبيب بيطري استشاري أول متخصص في أمراض وتغذية الدواجن (كوب 500، روس 308، هبرد). أجب بالعربية المبسطة بتنسيق ثابت:
+1) التشخيص المرجّح (مع الاحتمالات البديلة ودرجة الثقة، وما تراه في الصورة إن وجدت)
+2) المسار الأول — الكيماوي/البيطري: اسم المادة الفعالة، الجرعة بدقة (مجم/كجم وزن أو جم/لتر ماء) ومدة العلاج. اذكر فترة السحب وحذّر من الجرعات الخاطئة.
+3) المسار الثاني — الطبيعي/العشبي/العطار: بدائل متاحة (ثوم، خل تفاح، ليمون، عسل، خميرة، أعشاب...) مع التحضير والجرعة (مل/لتر أو جم/كجم علف). وضّح بصراحة أن الطبيعي داعم ولا يغني عن العلاج في الأمراض البكتيرية/الفيروسية الخطيرة.
+4) إدارة وتحسين البيئة (تهوية، حرارة، فرشة، مياه، تحصين).
+5) متى يجب استدعاء الطبيب أو إرسال عينات للمعمل (خاصة عند نفوق عالٍ مفاجئ أو أعراض عصبية/تنفسية حادة).
+ولا تخترع تشخيصاً قاطعاً من صورة فقط. اسأل عن بيانات ناقصة باختصار في النهاية. اختم بتنبيه أن الاستشارة إرشادية.`;
+const EXTRA=`
+
+منهجية التشخيص الاحترافي (التزم بها):
+- اجمع البيانات الناقصة أولاً بإيجاز: العمر، نسبة النفوق وتطورها، سرعة الانتشار، استهلاك العلف والماء، شكل الزرق، الحرارة والرطوبة والأمونيا والفرشة، برنامج التحصين، العلاجات السابقة. وإن كانت البيانات كافية فشخّص مباشرة ثم اسأل عن الناقص.
+- قدّم تشخيصاً تفريقياً مرتباً بنسب احتمال، مع العلامات الفارقة والصفة التشريحية التي تؤكد كل احتمال وما يستبعده.
+- المعرفة المرجعية: ميكوبلازما (3-6 أسابيع، رغوة، أكياس هوائية، أبطأ)؛ كوكسيديا (2-6 أسابيع، دم أو مخاط برتقالي، آفات الأعور أو الأمعاء الدقيقة)؛ كلوستريديا/NE (2-5 أسابيع، نفوق مفاجئ، أمعاء غازية نخرية، ثانوية للكوكسيديا غالباً)؛ نيوكاسل (أخضر مائي وأعراض عصبية)؛ جامبورو (3-6 أسابيع، أبيض مائي، جراب متورم)؛ برونكايتس (تنفسي وكلوي)؛ كولاي والتهاب السرة (ثانوي)؛ استسقاء؛ تسمم فطري (كبد شاحب دهني)؛ نقرس (يوريتات)؛ إجهاد برد (تكدس وصياح)؛ إجهاد حراري (لهث دون حمى)؛ إنفلونزا طيور عند نفوق شديد وتورم رأس (حجر وبلاغ رسمي).
+- لا تصف مضاداً حيوياً لحالة فيروسية أو بيئية إلا لمنع عدوى ثانوية مع تبرير. حذّر من الإفراط في الأدوية والمخلوطات وتداخل الكلى والكبد. اذكر فترة السحب.
+- قسم الدعم: قيّم صراحة هل يحتاج القطيع إلى كل من: غسيل كلوي، منظف كبد، مضاد سموم، أملاح وإلكتروليت (غير عضوية مقابل عضوية آمنة)، فيتامينات وبروبيوتيك. لكل بند قل (يلزم / لا يلزم) مع السبب من الأعراض، وإن لزم فاذكر الخيار الكيماوي والخيار الطبيعي بجرعة ومدة. لا تضف مكملات بلا حاجة.
+- حدد درجة الاستعجال (عاجل/متابعة) وخطوات التشريح وأخذ العينات والتحاليل المناسبة عند الحاجة.`;
+const FMT=`
+
+قاعدة الصياغة (تتجاوز أي تنسيق أطول): اجعل الرد مختصراً جداً (أقل من 120 كلمة): سطر أو سطران لوصف الحالة والتشخيص المرجّح، ثم العلاج الكيماوي (دواء + جرعة + مدة)، ثم العلاج الطبيعي (بديل + جرعة)، ثم سطر واحد للدعم إن لزم (كلى/كبد/سموم/أملاح/فيتامينات) وسطر تنبيه عند الخطورة. بلا مقدمات ولا شرح طويل. إذا بدأت رسالة المستخدم بكلمة تفاصيل فأجب حينها بالتفصيل الكامل: تشخيص تفريقي بالنسب، الصفة التشريحية، الجرعات والمدد وفترة السحب، تقييم الدعم بنداً بنداً، الإدارة والوقاية، ومتى يُستدعى الطبيب.`;
+const ASK=`\n\nالمتابعة: هذه محادثة مستمرة. إذا احتجت معلومة لتدقيق التشخيص فاختم ردك بسؤال أو سؤالين قصيرين فقط (رقّمهما) وانتظر رد المربي، ثم حدّث التشخيص والعلاج بناءً على رده دون تكرار ما قلته. إذا عدّل المربي معلومة أو أضاف جديداً فأعد تقييم الحالة مباشرة وقل ما تغيّر باختصار.`;
+const chips=['عطس وكحة وسيلان أنف','زرق دموي','زرق أخضر مائي','نفوق مفاجئ','ضعف شهية وخمول','لهث من الحر'];
+chips.forEach(c=>{const b=document.createElement('button');b.textContent=c;b.onclick=()=>{$('vt').value=($('vt').value+' '+c).trim()};$('chips').appendChild(b)});
+let hist=[],sample=null,imgOK=false;
+claude.use('sample').then(async s=>{sample=s;if(!s)return;try{imgOK=!!(await s.limits()).images}catch(e){}if(!imgOK){$('vi').hidden=true;$('imgl').hidden=true}}).catch(()=>{});
+const add=(c,t)=>{const d=document.createElement('div');d.className='m '+c;d.textContent=t;$('msgs').appendChild(d);$('msgs').scrollTop=1e9;return d};
+let lastBk='';
+const mode=on=>{$('vl').textContent=on?'اكتب ردك أو عدّل أو أضف معلومة':'صف الأعراض (نفس، زرق، علف، حرارة، نفوق...)';$('vt').placeholder=on?'مثال: النفوق 5 فراخ والزرق أخضر':'مثال: عطس وسيلان أنف وزرق أخضر في عمر 12 يوم';$('vs').textContent=on?'إرسال':'شخّص الحالة';$('vc').textContent=on?'محادثة جديدة':'مسح'};
+$('vc').onclick=()=>{hist=[];lastBk='';$('msgs').innerHTML='';$('vt').value='';mode(false)};
+$('vs').onclick=async()=>{
+ const t=$('vt').value.trim(),f=$('vi').files[0];
+ if(!t&&!f)return alert('اكتب الأعراض أو ارفع صورة');
+ if(!sample){add('a','الخدمة غير متاحة حالياً، حاول لاحقاً.');return}
+ const bk=$('vb').value+'|'+$('va').value,head=bk!==lastBk?`السلالة: ${$('vb').value} | العمر: ${$('va').value||'غير معروف'} يوم\n`:'';lastBk=bk;
+ const ctx=head+(t||'(صورة فقط)')+(f?'\n(مرفق صورة)':'');
+ document.querySelectorAll('#msgs .btn').forEach(x=>x.remove());
+ add('u',ctx);mode(true);
+ hist.push({role:'user',content:ctx});$('vt').value='';
+ const out=add('a','جارٍ التحليل...');const b=$('vs');b.disabled=true;
+ try{
+  const inp=[{role:'user',content:SYS+EXTRA+FMT+ASK+'\n\n---\nالمحادثة:'},{role:'assistant',content:'جاهز.'}].concat(hist);
+  const opt={cache:false,onText:({text})=>{out.textContent=text}};
+  if(f&&imgOK)opt.images=[f];
+  const r=await sample(inp,opt);out.textContent=r.text;hist.push({role:'assistant',content:r.text});
+  if(!t.startsWith('تفاصيل')){const d2=document.createElement('button');d2.className='btn sec';d2.textContent='تفاصيل';d2.onclick=()=>{d2.remove();$('vt').value='تفاصيل: فصّل الحالة السابقة بالتفصيل الكامل';$('vs').click()};$('msgs').appendChild(d2);$('msgs').scrollTop=1e9}
+  $('vi').value='';
+ }catch(e){out.textContent=e&&e.code==='not_granted'?'تعذّر تشغيل الخدمة.':'تعذّر التحليل الآن، حاول لاحقاً.';hist.pop();$('vt').value=t}
+ b.disabled=false};
+</script>
+</body>
+</html>
